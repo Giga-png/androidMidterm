@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#004564"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="bottom"
+            android:text="@string/pay"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/_400"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:id="@+id/cardNumberContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/cardNumberPart1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:hint="@string/xxxx"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColorHint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/cardNumberPart2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:hint="@string/xxxx"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColorHint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/cardNumberPart3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:hint="@string/xxxx"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColorHint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/cardNumberPart4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:hint="@string/xxxx"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColorHint="@color/hintColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:layout_constraintStart_toStartOf="@id/cardNumberContainer"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberContainer">
+
+            <EditText
+                android:id="@+id/dateMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:maxLength="2"
+                android:hint="@string/xxxx"
+                android:textColorHint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/dateYear"
+                android:maxLength="4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:hint="@string/xxxx"
+                android:textColorHint="@color/hintColor" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/xxxx"
+            android:maxLength="3"
+            android:textColorHint="@color/hintColor"
+            app:layout_constraintEnd_toEndOf="@id/cardNumberContainer"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberContainer" />
+
+
+        <Button
+            android:id="@+id/payBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
